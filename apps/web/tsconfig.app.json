@@ -23,7 +23,10 @@
     "noUncheckedSideEffectImports": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      // In the monorepo the API uses zod 4; make sure libraries that only
+      // import zod for types (e.g. @hookform/resolvers) see the web app's zod 3
+      "zod": ["./node_modules/zod"]
     }
   },
   "include": ["src"]
