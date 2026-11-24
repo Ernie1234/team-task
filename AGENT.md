@@ -21,7 +21,8 @@ Before finishing a change, run `typecheck` (and `lint` and `build` for the web a
 ## Dependencies
 
 - Add a dependency to the app that uses it: `cd apps/web && bun add <pkg>`.
-- The apps use different major versions of some packages (zod 3 in web, zod 4 in api). `apps/web/tsconfig.app.json` maps `zod` to the web app's copy so type-only imports from libraries resolve correctly.
+- Shared enums, Zod schemas and response types live in `packages/shared` (`@team-task/shared`); never redefine them in an app. Request body types are the `z.input` of the API's schemas, so the web and the API can't drift.
+- Every package has `typecheck`, `lint` and `test` scripts where they apply; `bun run test` runs them all (tests use `bun:test`).
 
 ## Git
 

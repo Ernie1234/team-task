@@ -1,7 +1,7 @@
 import { HTTPSTATUS } from "@/config/http.config";
 import { asyncHandler } from "@/middlewares/asyncHandlerMiddleware";
 import { joinWorkspaceByInvite } from "@/services/member-service";
-import { inviteCodeSchema } from "@/validation/invite-code-validation";
+import { inviteCodeSchema } from "@team-task/shared/validation";
 import type { Request, Response } from "express";
 
 export const joinWorkspaceController = asyncHandler(

@@ -3,7 +3,7 @@ import {
   Roles,
   type PermissionType,
   type RoleType,
-} from "@/enums/role-enum";
+} from "@team-task/shared/enums";
 import { RolePermissions } from "@/utils/role-permission";
 import mongoose, { Schema, Document } from "mongoose";
 

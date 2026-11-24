@@ -16,7 +16,7 @@ import { disconnectService } from "@/services/calendar-service";
 import { deleteWorkspaceByIdService } from "@/services/workspace-service";
 import { forgetMemberships } from "@/utils/membership-cache";
 import { BadRequestException, NotFoundException, UnauthorizedException } from "@/utils/appError";
-import type { UpdateProfileType } from "@/validation/user-validation";
+import type { UpdateProfileType } from "@team-task/shared/validation";
 
 const findUser = async (userId: string, withPassword = false) => {
   const user = await UserModel.findById(userId).select(withPassword ? "+password" : "-password");

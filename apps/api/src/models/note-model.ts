@@ -1,7 +1,8 @@
 import mongoose, { Document, Schema, Types } from "mongoose";
 
-export const NOTE_VISIBILITY = ["private", "workspace"] as const;
-export type NoteVisibility = (typeof NOTE_VISIBILITY)[number];
+import { NOTE_VISIBILITY, type NoteVisibility } from "@team-task/shared/validation";
+
+export { NOTE_VISIBILITY, type NoteVisibility };
 
 /** A Notion-style page: title, icon and a document of editor blocks. */
 export interface NoteDocument extends Document {

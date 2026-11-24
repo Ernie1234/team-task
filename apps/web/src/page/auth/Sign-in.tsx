@@ -4,6 +4,7 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { signInSchema } from "@team-task/shared/validation";
 import { Button } from "@/components/ui/button";
 
 import {
@@ -25,14 +26,7 @@ import { toast } from "@/hooks/use-toast";
 import { Loader } from "lucide-react";
 
 // The form schema and component logic are unchanged
-const formSchema = z.object({
-  email: z.string().trim().email("Invalid email address").min(1, {
-    message: "Email is required",
-  }),
-  password: z.string().trim().min(1, {
-    message: "Password is required",
-  }),
-});
+const formSchema = signInSchema;
 
 const SignIn = () => {
   const navigate = useNavigate();

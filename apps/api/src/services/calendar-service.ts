@@ -19,7 +19,7 @@ import {
   type GoogleEvent,
 } from "@/utils/google-calendar";
 import Logger from "@/utils/logger";
-import type { CreateEventType, UpdateEventType } from "@/validation/calendar-validation";
+import type { CreateEventType, UpdateEventType } from "@team-task/shared/validation";
 
 const DAY = 86_400_000;
 const SYNC_PAST_DAYS = 30;

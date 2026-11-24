@@ -3,6 +3,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { verifyEmailSchema } from "@team-task/shared/validation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
@@ -13,9 +14,7 @@ import { resendVerificationCodeMutationFn, verifyEmailMutationFn } from "../../l
 import { toast } from "../../hooks/use-toast";
 import type { CustomError } from "@/types/custom-error.type";
 
-const formSchema = z.object({
-  otp: z.string().length(6, { message: "Enter the 6-digit code from the email." }),
-});
+const formSchema = verifyEmailSchema;
 
 const RESEND_COOLDOWN_S = 30;
 

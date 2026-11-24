@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import { ProviderEnum } from "@/enums/account-provider-enum";
-import { Roles } from "@/enums/role-enum";
+import { Roles } from "@team-task/shared/enums";
 import AccountModel from "@/models/account-model";
 import { AuthAccountModel } from "@/models/auth-models";
 import MemberModel from "@/models/member-model";

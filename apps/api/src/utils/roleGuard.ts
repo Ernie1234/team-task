@@ -1,4 +1,4 @@
-import type { PermissionType } from "@/enums/role-enum";
+import type { PermissionType } from "@team-task/shared/enums";
 import { UnauthorizedException } from "./appError";
 import { RolePermissions } from "./role-permission";
 

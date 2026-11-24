@@ -1,5 +1,5 @@
-import { Permissions } from "@/enums/role-enum";
-import { workspaceIdSchema } from "./../validation/workspace-validation";
+import { Permissions } from "@team-task/shared/enums";
+import { workspaceIdSchema } from "@team-task/shared/validation";
 import { asyncHandler } from "@/middlewares/asyncHandlerMiddleware";
 import { getMemberRoleInWorkspace } from "@/services/member-service";
 import { roleGuard } from "@/utils/roleGuard";
@@ -18,7 +18,7 @@ import {
   getAllTasksQuerySchema,
   taskParamsSchema,
   updateTaskBodySchema,
-} from "@/validation/task-validation";
+} from "@team-task/shared/validation";
 import { ZodError } from "zod";
 import { ErrorCodeEnum } from "@/enums/errorCode.enum";
 

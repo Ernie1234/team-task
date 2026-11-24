@@ -1,5 +1,5 @@
 import { ErrorCodeEnum } from "@/enums/errorCode.enum";
-import { Roles } from "@/enums/role-enum";
+import { Roles } from "@team-task/shared/enums";
 import ActivityModel from "@/models/activity-model";
 import MemberModel from "@/models/member-model";
 import { NotificationTypeEnum } from "@/models/notification-model";

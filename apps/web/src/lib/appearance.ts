@@ -3,22 +3,9 @@
  * Everything is applied as CSS variables on <html>, so every component that
  * uses the design tokens (bg-primary, text-sidebar-foreground…) follows along.
  */
+import type { Appearance, Mode, Radius } from "@team-task/shared/types";
 
-export type Mode = "light" | "dark" | "system";
-export type Radius = "sharp" | "default" | "round";
-
-export type Appearance = {
-  mode: Mode;
-  theme: string; // preset id, or "custom"
-  customAccent: string;
-  customSidebar: string;
-  sidebarStyle: "themed" | "plain";
-  font: string;
-  fontSize: number; // px size of 1rem
-  radius: Radius;
-  reduceMotion: boolean;
-  updatedAt: number; // last change made by the user (0 = never)
-};
+export type { Appearance, Mode, Radius };
 
 export const DEFAULT_APPEARANCE: Appearance = {
   mode: "system",

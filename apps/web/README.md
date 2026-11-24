@@ -87,7 +87,8 @@ Ticked off as each item ships.
 
 ### Platform and architecture
 - [x] Monorepo: web app and API in one repo (Bun workspaces + Turborepo); history from both repos kept
-- [ ] Shared packages in the monorepo: types, Zod validation and API client used by the web, API and mobile apps
+- [x] Shared package: enums, Zod validation and response types (`@team-task/shared`), used by the web app and the API
+- [ ] Shared API client package for the web and mobile apps
 - [ ] Move from MongoDB to PostgreSQL with Drizzle ORM: foreign keys and transactions, full-text search, pgvector for AI search
 - [ ] Mobile app with React Native (Expo): tasks, chat, notes and push notifications, signed in with Better Auth bearer tokens
 - [ ] Better Auth JWT plugin with a JWKS endpoint, so the Go and Python services can check who's calling without the database

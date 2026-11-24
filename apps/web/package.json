@@ -18,7 +18,7 @@
     "@emoji-mart/react": "^1.1.1",
     "@floating-ui/dom": "^1.8.0",
     "@floating-ui/react-dom": "^2.1.9",
-    "@hookform/resolvers": "^3.9.1",
+    "@hookform/resolvers": "^5.2.2",
     "@mantine/core": "^8.3.11",
     "@mantine/hooks": "^8.3.11",
     "@radix-ui/react-avatar": "^1.1.2",
@@ -64,8 +64,9 @@
     "y-prosemirror": "^1.3.7",
     "y-protocols": "^1.0.7",
     "yjs": "^13.6.33",
-    "zod": "^3.24.1",
-    "zustand": "^5.0.8"
+    "zod": "^4.5.4",
+    "zustand": "^5.0.8",
+    "@team-task/shared": "workspace:*"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

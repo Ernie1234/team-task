@@ -2,7 +2,7 @@ import {
   Permissions,
   type PermissionType,
   type RoleType,
-} from "@/enums/role-enum";
+} from "@team-task/shared/enums";
 
 export const RolePermissions: Record<RoleType, Array<PermissionType>> = {
   OWNER: [

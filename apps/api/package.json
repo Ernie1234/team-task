@@ -6,7 +6,7 @@
     "dev": "bun run --watch src/index.ts",
     "build": "bun build src/index.ts --target bun --outfile dist/index.js",
     "start": "bun run dist/index.js",
-    "test": "vitest",
+    "test": "bun test --pass-with-no-tests",
     "seed": "bun run src/seeders/role-seeder.ts",
     "typecheck": "tsc --noEmit -p ."
   },
@@ -42,7 +42,8 @@
     "winston": "^3.17.0",
     "y-protocols": "^1.0.7",
     "yjs": "^13.6.33",
-    "zod": "^4.5.4"
+    "zod": "^4.5.4",
+    "@team-task/shared": "workspace:*"
   },
   "private": true
 }

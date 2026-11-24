@@ -27,7 +27,7 @@ Before finishing any change: type-check, lint and build must pass.
 
 - React 18, TypeScript, Vite, Tailwind CSS 3, shadcn/ui (Radix primitives in `src/components/ui`).
 - **Server state:** TanStack Query. One hook file per area in `src/hooks/api` (`use-tasks.ts`, `use-notes.ts`, `use-calendar.ts`…). Mutations update the cache optimistically and roll back on error.
-- **API calls** live in `src/lib/api.ts`; types in `src/types/api.type.ts`.
+- **API calls** live in `src/lib/api.ts`. Response types, enums and Zod schemas come from `@team-task/shared` (`src/types/*.type.ts` and `@/constant` re-export it); forms build on the shared schemas instead of defining their own.
 - **Live updates:** `src/lib/socket.ts` forwards server events; listen with `socketService.on(event, cb)` in a hook and invalidate or patch the query cache.
 - **URL state** (filters, view, open item) uses `nuqs`.
 - **Zustand:** selectors must never return a new array or object each call (use shared constants such as `NO_TYPERS`), or React re-renders forever.

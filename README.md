@@ -8,7 +8,7 @@ This is the Team Task monorepo, run with [Bun workspaces](https://bun.sh/docs/in
 | --- | --- | --- |
 | `apps/web` | Web app: React, TypeScript, Vite | [README](apps/web/README.md) (features, roadmap, screenshots) |
 | `apps/api` | API: Bun, Express 5, MongoDB, Socket.IO | [README](apps/api/README.md) (endpoints, environment variables) |
-| `packages/` | Shared code (types, validation, API client): coming next | |
+| `packages/shared` | `@team-task/shared`: enums, Zod schemas and response types used by both apps | `src/{enums,validation,types}` |
 
 The git history of both former repos ([team-task_frontend](https://github.com/Ernie1234/team-task_frontend) and [team-task_backend](https://github.com/Ernie1234/team-task_backend)) is kept here, with each file at its new path.
 
@@ -32,7 +32,8 @@ Run from the repo root. Turborepo runs the task in every app that has it and cac
 | `bun run dev` | Start the API and web app together |
 | `bun run dev:api` / `bun run dev:web` | Start one app |
 | `bun run build` | Production build of every app |
-| `bun run typecheck` | Type-check every app |
+| `bun run typecheck` | Type-check every package |
 | `bun run lint` | Lint every app |
+| `bun run test` | Run the unit tests (`bun:test`) |
 
 To run a command in one app: `bun run --filter @team-task/web <script>`, or `cd` into the app.

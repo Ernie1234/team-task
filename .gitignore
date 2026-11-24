@@ -10,3 +10,6 @@ coverage
 .env.*.local
 .DS_Store
 .idea
+
+# agent scratch
+.superpowers

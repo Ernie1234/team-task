@@ -1,8 +1,6 @@
 import { z } from "zod";
-import mongoose from "mongoose";
-import { isValidTimeZone } from "@/utils/zoned-time";
+import { isValidTimeZone, objectId } from "./helpers";
 
-const objectId = () => z.string().trim().refine((v) => mongoose.isValidObjectId(v), "Invalid id");
 const reminder = z.number().int().min(0).max(40320).nullable();
 
 const base = z.object({

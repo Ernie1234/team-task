@@ -1,8 +1,8 @@
 import type { Request, Response } from "express";
 import { HTTPSTATUS } from "@/config/http.config";
 import { asyncHandler } from "@/middlewares/asyncHandlerMiddleware";
-import { workspaceIdSchema } from "@/validation/workspace-validation";
-import { createNoteSchema, noteIdSchema, updateNoteSchema } from "@/validation/note-validation";
+import { workspaceIdSchema } from "@team-task/shared/validation";
+import { createNoteSchema, noteIdSchema, updateNoteSchema } from "@team-task/shared/validation";
 import { getMemberRoleInWorkspace } from "@/services/member-service";
 import {
   createNoteService,
