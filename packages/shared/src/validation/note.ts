@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { NOTE_VISIBILITY, objectId } from "./helpers";
+import { NOTE_VISIBILITY, objectId } from "#shared/validation/helpers";
 
 // Editor documents are stored as-is; cap their size so one note can't bloat the database
 const MAX_CONTENT_BYTES = 1_500_000;

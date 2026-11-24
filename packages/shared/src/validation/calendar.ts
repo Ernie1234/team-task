@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { isValidTimeZone, objectId } from "./helpers";
+import { isValidTimeZone, objectId } from "#shared/validation/helpers";
 
 const reminder = z.number().int().min(0).max(40320).nullable();
 

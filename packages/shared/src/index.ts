@@ -1,3 +1,3 @@
-export * from "./enums";
-export * from "./validation";
-export * from "./types";
+export * from "#shared/enums/index";
+export * from "#shared/validation/index";
+export * from "#shared/types/index";

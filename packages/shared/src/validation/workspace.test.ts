@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { createWorkspaceSchema, updateWorkspaceSchema } from "./workspace";
+import { createWorkspaceSchema, updateWorkspaceSchema } from "#shared/validation/workspace";
 
 test("empty description is accepted", () => {
   expect(createWorkspaceSchema.safeParse({ name: "Team", description: "" }).success).toBe(true);

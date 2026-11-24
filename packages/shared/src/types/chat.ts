@@ -1,4 +1,4 @@
-import type { Message, MessageAttachment } from "./socket";
+import type { Message, MessageAttachment } from "#shared/types/socket";
 
 export type ConversationType = "workspace" | "project" | "direct";
 

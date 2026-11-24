@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { isValidTimeZone, objectId } from "./helpers";
+import { isValidTimeZone, objectId } from "#shared/validation/helpers";
 
 test("objectId accepts a 24-char hex id", () => {
   expect(objectId("task").safeParse("64b7f0c2a1b2c3d4e5f60718").success).toBe(true);
