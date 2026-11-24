@@ -36,7 +36,7 @@ Backend items from the [main roadmap](../web/README.md#roadmap).
 - [X] Switching to using BetterAuth instead of the regular login.
 - [ ] Deploy with a seeded demo account
 - [x] Monorepo with the web app (Bun workspaces + Turborepo), history from both repos kept
-- [ ] Shared Zod schemas and types in a workspace package
+- [x] Shared Zod schemas, enums and types in a workspace package (`@team-task/shared`)
 - [ ] Move from MongoDB to PostgreSQL with Drizzle ORM (Better Auth Drizzle adapter, data migration script)
 - [ ] Better Auth bearer plugin for the React Native app
 - [ ] Better Auth JWT plugin + JWKS endpoint for the Go and Python services

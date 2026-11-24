@@ -33,7 +33,7 @@ Before finishing any change: type-check must pass, and run any tests for the are
 - **Errors:** unexpected errors reach `errorHandler`, which logs them and calls `reportError` (Sentry). For errors caught elsewhere (jobs, sockets) call `reportError(error, { context })` yourself. Never send `error.message` of a 500 to the client.
 - **Metrics:** add counters/gauges in `utils/metrics.ts` (prefix `teamtask_`). Use route patterns or small fixed sets as labels, never ids or emails.
 - **Layers:** `routes/` → `controllers/` (parse and validate with Zod, check membership/permissions) → `services/` (business logic, database) → `models/`. Controllers never talk to Mongoose directly.
-- **Validation:** every request body, param and query goes through a Zod schema in `validation/`. Update schemas are `.strict()`.
+- **Validation:** every request body, param and query goes through a Zod schema from `@team-task/shared/validation` (`packages/shared/src/validation`, with a `bun:test` file beside it). Update schemas are `.strict()`. Shared code must not import Mongoose or API code.
 - **Errors:** throw `BadRequestException`, `NotFoundException`, `UnauthorizedException`, `ForbiddenException` from `utils/appError`; the error middleware formats them.
 - **Access control:** check workspace membership (`getMemberRoleInWorkspace` / `utils/membership-cache.ts`) and role permissions before reading or writing workspace data. Private notes and personal calendar data are scoped to their owner.
 - **Real-time:** emit through `getSocketService()`: `emitToUser(userId, …)` for personal events, `emitToRooms(["presence:<workspaceId>"], …)` for workspace-wide ones.
