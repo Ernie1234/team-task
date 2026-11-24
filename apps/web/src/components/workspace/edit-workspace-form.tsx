@@ -2,6 +2,7 @@ import { SectionCard } from "@/components/shared/page-header";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { createWorkspaceSchema } from "@team-task/shared/validation";
 import {
   Form,
   FormControl,
@@ -33,12 +34,8 @@ export default function EditWorkspaceForm() {
     mutationFn: editWorkspaceMutationFn,
   });
 
-  const formSchema = z.object({
-    name: z.string().trim().min(1, {
-      message: "Workspace name is required",
-    }),
-    description: z.string().trim(),
-  });
+  // The textarea always holds a string; "" is a valid description
+  const formSchema = createWorkspaceSchema.extend({ description: z.string().trim() });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),

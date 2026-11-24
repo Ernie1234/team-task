@@ -2,6 +2,7 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { signUpSchema } from "@team-task/shared/validation";
 import { Button } from "../../components/ui/button";
 import {
   Form,
@@ -22,17 +23,7 @@ import AuthShowcase from "@/components/auth/auth-showcase";
 import Logo from "@/components/logo";
 
 // Form schema and component logic are unchanged
-const formSchema = z.object({
-  name: z.string().trim().min(1, {
-    message: "Name is required",
-  }),
-  email: z.string().trim().email("Invalid email address").min(1, {
-    message: "Email is required",
-  }),
-  password: z.string().trim().min(8, {
-    message: "Use at least 8 characters",
-  }),
-});
+const formSchema = signUpSchema;
 
 const SignUp = () => {
   const navigate = useNavigate();

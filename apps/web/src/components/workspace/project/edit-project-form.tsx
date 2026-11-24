@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { createProjectSchema } from "@team-task/shared/validation";
 import {
   Form,
   FormControl,
@@ -38,12 +39,8 @@ export default function EditProjectForm(props: {
 
   const projectId = project?._id as string;
 
-  const formSchema = z.object({
-    name: z.string().trim().min(1, {
-      message: "Project title is required",
-    }),
-    description: z.string().trim(),
-  });
+  // The textarea always holds a string; "" is a valid description
+  const formSchema = createProjectSchema.pick({ name: true }).extend({ description: z.string().trim() });
 
   const { mutate, isPending } = useMutation({
     mutationFn: editProjectMutationFn,

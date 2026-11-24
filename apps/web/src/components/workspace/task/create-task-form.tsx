@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { createTaskBodySchema } from "@team-task/shared/validation";
 import { format } from "date-fns";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -98,32 +99,13 @@ export default function CreateTaskForm(props: {
     };
   });
 
-  const formSchema = z.object({
-    title: z.string().trim().min(1, {
-      message: "Title is required",
-    }),
+  const formSchema = createTaskBodySchema.pick({ title: true }).extend({
     description: z.string().trim(),
-    projectId: z.string().trim().min(1, {
-      message: "Project is required",
-    }),
-    status: z.enum(
-      Object.values(TaskStatusEnum) as [keyof typeof TaskStatusEnum],
-      {
-        required_error: "Status is required",
-      }
-    ),
-    priority: z.enum(
-      Object.values(TaskPriorityEnum) as [keyof typeof TaskPriorityEnum],
-      {
-        required_error: "Priority is required",
-      }
-    ),
-    assignedTo: z.string().trim().min(1, {
-      message: "AssignedTo is required",
-    }),
-    dueDate: z.date({
-      required_error: "A date of birth is required.",
-    }),
+    projectId: z.string().trim().min(1, { message: "Project is required" }),
+    status: z.enum(TaskStatusEnum, { error: "Status is required" }),
+    priority: z.enum(TaskPriorityEnum, { error: "Priority is required" }),
+    assignedTo: z.string().trim().min(1, { message: "Assignee is required" }),
+    dueDate: z.date({ error: "A due date is required." }),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({

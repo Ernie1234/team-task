@@ -4,7 +4,11 @@ import type {
   TaskStatusEnumType,
 } from "../enums";
 import type { Appearance } from "./appearance";
+import type { z } from "zod";
 import type { NoteVisibility } from "../validation/helpers";
+import type { createProjectSchema, updateProjectSchema } from "../validation/project";
+import type { createTaskBodySchema } from "../validation/task";
+import type { createWorkspaceSchema, updateWorkspaceSchema } from "../validation/workspace";
 
 export type loginType = { email: string; password: string };
 /** Better Auth's sign-in response */
@@ -159,17 +163,12 @@ export type WorkspaceType = {
   inviteCode: string;
 };
 
-export type CreateWorkspaceType = {
-  name: string;
-  description: string;
-};
+/** Request bodies are the inputs of the API's own schemas */
+export type CreateWorkspaceType = z.input<typeof createWorkspaceSchema>;
 
 export type EditWorkspaceType = {
   workspaceId: string;
-  data: {
-    name: string;
-    description: string;
-  };
+  data: z.input<typeof updateWorkspaceSchema>;
 };
 
 export type CreateWorkspaceResponseType = {
@@ -275,11 +274,8 @@ export type ProjectType = {
 
 export type CreateProjectPayloadType = {
   workspaceId: string;
-  data: {
-    emoji: string;
-    name: string;
-    description: string;
-  };
+  // workspace and createdBy come from the URL and the session
+  data: Omit<z.input<typeof createProjectSchema>, "workspace" | "createdBy">;
 };
 
 export type ProjectResponseType = {
@@ -290,11 +286,7 @@ export type ProjectResponseType = {
 export type EditProjectPayloadType = {
   workspaceId: string;
   projectId: string;
-  data: {
-    emoji: string;
-    name: string;
-    description: string;
-  };
+  data: Omit<z.input<typeof updateProjectSchema>, "workspace" | "createdBy">;
 };
 
 //ALL PROJECTS IN WORKSPACE TYPE
@@ -358,15 +350,7 @@ export type RecentActivitiesByWorkspaceIdResponseType = {
 export type CreateTaskPayloadType = {
   workspaceId: string;
   projectId: string;
-  data: {
-    title: string;
-    description: string;
-    priority: TaskPriorityEnumType;
-    status: TaskStatusEnumType;
-    assignedTo: string;
-    dueDate: string;
-    parentTask?: string;
-  };
+  data: z.input<typeof createTaskBodySchema>;
 };
 
 //added new for edtiting of task

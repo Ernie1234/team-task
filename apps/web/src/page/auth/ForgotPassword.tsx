@@ -4,6 +4,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { forgotPasswordSchema, resetPasswordSchema } from "@team-task/shared/validation";
 import { Loader } from "lucide-react";
 import Logo from "@/components/logo";
 import { Button } from "@/components/ui/button";
@@ -15,14 +16,8 @@ import { loginMutationFn, requestPasswordResetMutationFn, resetPasswordMutationF
 import { toast } from "@/hooks/use-toast";
 import type { CustomError } from "@/types/custom-error.type";
 
-const emailSchema = z.object({ email: z.string().trim().email("Enter a valid email address") });
-const resetSchema = z
-  .object({
-    otp: z.string().length(6, "Enter the 6-digit code from the email"),
-    password: z.string().min(8, "Use at least 8 characters"),
-    confirm: z.string(),
-  })
-  .refine((v) => v.password === v.confirm, { path: ["confirm"], message: "Passwords don't match" });
+const emailSchema = forgotPasswordSchema;
+const resetSchema = resetPasswordSchema;
 
 const ForgotPassword = () => {
   const navigate = useNavigate();

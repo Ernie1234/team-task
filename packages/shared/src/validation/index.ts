@@ -1,4 +1,5 @@
 export * from "./helpers";
+export * from "./auth";
 export * from "./calendar";
 export * from "./chat";
 export * from "./invite-code";

@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { createProjectSchema } from "@team-task/shared/validation";
 import {
   Form,
   FormControl,
@@ -41,12 +42,8 @@ export default function CreateProjectForm({
     mutationFn: createProjectMutationFn,
   });
 
-  const formSchema = z.object({
-    name: z.string().trim().min(1, {
-      message: "Project title is required",
-    }),
-    description: z.string().trim(),
-  });
+  // The textarea always holds a string; "" is a valid description
+  const formSchema = createProjectSchema.pick({ name: true }).extend({ description: z.string().trim() });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
