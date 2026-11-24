@@ -4,10 +4,12 @@ Guidance for AI coding agents (and humans) working in this repository.
 
 ## Project
 
-Team Task is a real-time team workspace: ClickUp-style tasks, Slack-style chat, Notion-style notes and a calendar with two-way Google Calendar sync. Two repositories, usually checked out side by side:
+Team Task is a real-time team workspace: ClickUp-style tasks, Slack-style chat, Notion-style notes and a calendar with two-way Google Calendar sync. This app is `apps/api` in the Team Task monorepo (Bun workspaces + Turborepo):
 
-- `backend/`: this repo, the API ([team-task_backend](https://github.com/Ernie1234/team-task_backend))
-- `frontend/`: the React web app ([team-task_frontend](https://github.com/Ernie1234/team-task_frontend))
+- `apps/api`: this app, the API
+- `apps/web`: the React web app
+
+Run `bun install` at the repo root (one `bun.lock` for the whole repo). The commands below run from `apps/api`; from the root, `bun run dev|build|lint|typecheck` runs them for every app through Turborepo.
 
 ## Commands
 
@@ -15,7 +17,7 @@ Team Task is a real-time team workspace: ClickUp-style tasks, Slack-style chat, 
 bun install
 bun run dev                 # http://localhost:3000, routes under /api/v1
 npx tsc --noEmit -p .       # type-check
-bun run lint
+bun run build               # production bundle in dist/
 bun run seed                # default roles and permissions
 ```
 

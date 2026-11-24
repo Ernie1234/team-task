@@ -3,7 +3,7 @@
 **A real-time workspace for teams: tasks, chat, notes and calendar in one app.**
 Think ClickUp's task views, Slack's chat, Notion's pages and Notion Calendar's scheduling, sharing one account, one theme and live updates everywhere.
 
-This repository is the **web app** (React + TypeScript). The API lives in [team-task_backend](https://github.com/Ernie1234/team-task_backend).
+This is the **web app** (React + TypeScript), `apps/web` in the Team Task monorepo. The API is in `apps/api`.
 
 > Live demo: _coming soon_ · Author: [Anumah Joshua Eneye (Ernie)](https://ernie-portfolio.vercel.app) · [LinkedIn](https://linkedin.com/in/anumahjoshua) · [GitHub](https://github.com/Ernie1234)
 
@@ -86,7 +86,8 @@ Everything below is built and working. Unticked items are on the [roadmap](#road
 Ticked off as each item ships.
 
 ### Platform and architecture
-- [ ] Monorepo: web app, API and mobile app in one repo (Bun workspaces + Turborepo) with shared types, validation and API client; history from both repos kept
+- [x] Monorepo: web app and API in one repo (Bun workspaces + Turborepo); history from both repos kept
+- [ ] Shared packages in the monorepo: types, Zod validation and API client used by the web, API and mobile apps
 - [ ] Move from MongoDB to PostgreSQL with Drizzle ORM: foreign keys and transactions, full-text search, pgvector for AI search
 - [ ] Mobile app with React Native (Expo): tasks, chat, notes and push notifications, signed in with Better Auth bearer tokens
 - [ ] Better Auth JWT plugin with a JWKS endpoint, so the Go and Python services can check who's calling without the database
@@ -167,10 +168,10 @@ flowchart LR
 
 ## Getting started
 
-**Prerequisites:** [Bun](https://bun.sh) 1.x and the [backend](https://github.com/Ernie1234/team-task_backend) running on port 3000.
+**Prerequisites:** [Bun](https://bun.sh) 1.x and the API (`apps/api`) running on port 3000. From the repo root, `bun run dev` starts both.
 
 ```bash
-bun install
+bun install               # run once at the repo root
 cp .env.example .env      # VITE_API_BASE_URL=http://localhost:3000/api/v1
 bun run dev               # http://localhost:5173
 ```

@@ -2,7 +2,7 @@
 
 The backend for **Team Task**, a real-time team workspace with tasks, chat, notes and calendar. REST + WebSocket API built with Bun, Express 5, MongoDB and Socket.IO.
 
-The web app lives in [team-task_frontend](https://github.com/Ernie1234/team-task_frontend). Its README has screenshots, the full feature list and the product roadmap.
+This is `apps/api` in the Team Task monorepo; the web app is in `apps/web`. Its README has screenshots, the full feature list and the product roadmap.
 
 ---
 
@@ -30,12 +30,13 @@ Unticked items are on the [roadmap](#roadmap).
 
 ## Roadmap
 
-Backend items from the [main roadmap](https://github.com/Ernie1234/team-task_frontend#roadmap).
+Backend items from the [main roadmap](../web/README.md#roadmap).
 
 - [x] Make tour guide tutorial for new account
 - [X] Switching to using BetterAuth instead of the regular login.
 - [ ] Deploy with a seeded demo account
-- [ ] Monorepo with the web app and mobile app (Bun workspaces + Turborepo), shared Zod schemas and types
+- [x] Monorepo with the web app (Bun workspaces + Turborepo), history from both repos kept
+- [ ] Shared Zod schemas and types in a workspace package
 - [ ] Move from MongoDB to PostgreSQL with Drizzle ORM (Better Auth Drizzle adapter, data migration script)
 - [ ] Better Auth bearer plugin for the React Native app
 - [ ] Better Auth JWT plugin + JWKS endpoint for the Go and Python services
@@ -81,7 +82,7 @@ All routes are under `/api/v1`. Everything except `/auth` needs a signed-in sess
 **Prerequisites:** [Bun](https://bun.sh) 1.x, a MongoDB database (MongoDB Atlas works), and a Google OAuth client.
 
 ```bash
-bun install
+bun install       # run once at the repo root
 cp .env.example .env
 bun run seed      # create the default roles
 bun run dev       # http://localhost:3000
@@ -157,5 +158,5 @@ src/
 | --- | --- |
 | `bun run dev` | Start with file watching |
 | `bun run build` / `bun run start` | Build and run for production |
-| `bun run lint` | Run ESLint |
+| `bun run typecheck` | Type-check |
 | `bun run seed` | Seed roles and permissions |
