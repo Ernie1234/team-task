@@ -1,6 +1,6 @@
 import "dotenv/config";
 // Error tracking first, so it sees everything that follows
-import { flushErrorReports, reportError } from "./config/instrument";
+import { flushErrorReports, reportError } from "@/config/instrument";
 import express from "express";
 import { createServer } from "http";
 import type { Request, Response, NextFunction } from "express";
@@ -8,23 +8,23 @@ import cors from "cors";
 import helmet from "helmet";
 import { toNodeHandler } from "better-auth/node";
 
-import { config } from "./config/app.config";
-import Logger from "./utils/logger";
-import { bindUserToRequest, requestObservability } from "./middlewares/request-observability";
-import healthRoute, { markDraining } from "./routes/health-route";
-import { connectDB, disconnectDB } from "./config/db";
-import { flushNoteSessions } from "./services/note-collab-service";
-import { errorHandler } from "./middlewares/errorHandlerMiddleware";
-import { asyncHandler } from "./middlewares/asyncHandlerMiddleware";
-import { BadRequestException } from "./utils/appError";
-import { auth, AUTH_BASE_PATH, authMongoClient } from "./config/auth";
-import { migrateLegacyAuth } from "./services/auth-service";
-import apiRouter from "./routes";
-import SocketService from "./config/socket.config";
-import { attachSession, isAuthenticated } from "./middlewares/isAuthenticatedMiddleware";
-import { IMAGE_EXTENSIONS, UPLOAD_ROOT } from "./config/uploads";
-import { startCalendarJobs, stopCalendarJobs } from "./services/calendar-jobs";
-import { startEmailJobs, stopEmailJobs } from "./services/email-jobs";
+import { config } from "@/config/app.config";
+import Logger from "@/utils/logger";
+import { bindUserToRequest, requestObservability } from "@/middlewares/request-observability";
+import healthRoute, { markDraining } from "@/routes/health-route";
+import { connectDB, disconnectDB } from "@/config/db";
+import { flushNoteSessions } from "@/services/note-collab-service";
+import { errorHandler } from "@/middlewares/errorHandlerMiddleware";
+import { asyncHandler } from "@/middlewares/asyncHandlerMiddleware";
+import { BadRequestException } from "@/utils/appError";
+import { auth, AUTH_BASE_PATH, authMongoClient } from "@/config/auth";
+import { migrateLegacyAuth } from "@/services/auth-service";
+import apiRouter from "@/routes";
+import SocketService from "@/config/socket.config";
+import { attachSession, isAuthenticated } from "@/middlewares/isAuthenticatedMiddleware";
+import { IMAGE_EXTENSIONS, UPLOAD_ROOT } from "@/config/uploads";
+import { startCalendarJobs, stopCalendarJobs } from "@/services/calendar-jobs";
+import { startEmailJobs, stopEmailJobs } from "@/services/email-jobs";
 
 const app = express();
 const server = createServer(app);

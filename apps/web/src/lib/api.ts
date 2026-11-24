@@ -1,7 +1,7 @@
-import API from "./axios-client";
-import type { Appearance } from "./appearance";
+import API from "@/lib/axios-client";
+import type { Appearance } from "@/lib/appearance";
 import type { CalendarConnectionType, CalendarEventType, EventPayloadType, NoteSummaryType, NoteType, NoteVisibility, UpdateNotePayloadType } from "@/types/api.type";
-import { baseURL } from "./base-url";
+import { baseURL } from "@/lib/base-url";
 import {
   AllMembersInWorkspaceResponseType,
   AllProjectPayloadType,
@@ -22,7 +22,7 @@ import {
   WorkspaceNotificationsResponseType,
   TaskDetailResponseType,
   DashboardType,
-} from "../types/api.type";
+} from "@/types/api.type";
 import {
   AllWorkspaceResponseType,
   CreateWorkspaceType,
@@ -33,7 +33,7 @@ import {
   WorkspaceByIdResponseType,
   EditWorkspaceType,
 } from "@/types/api.type";
-import type { Message, OnlineUser } from "./socket";
+import type { Message, OnlineUser } from "@/lib/socket";
 import type { Conversation, SharedAttachment, UploadedAttachment } from "@/types/chat.type";
 
 //******** */ CHAT TYPES ****************

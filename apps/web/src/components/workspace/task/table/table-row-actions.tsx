@@ -17,7 +17,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import useWorkspaceId from "@/hooks/use-workspace-id";
 import { deleteTaskMutationFn } from "@/lib/api";
 import { toast } from "@/hooks/use-toast";
-import EditTaskDialog from "../edit-task-dialog"; // Import the Edit Dialog
+import EditTaskDialog from "@/components/workspace/task/edit-task-dialog"; // Import the Edit Dialog
 
 interface DataTableRowActionsProps {
   row: Row<TaskType>;

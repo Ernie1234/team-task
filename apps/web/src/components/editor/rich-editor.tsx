@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import "@blocknote/mantine/style.css";
-import "./editor.css";
+import "@/components/editor/editor.css";
 import { useCreateBlockNote } from "@blocknote/react";
 import { BlockNoteView } from "@blocknote/mantine";
 import { en } from "@blocknote/core/locales";

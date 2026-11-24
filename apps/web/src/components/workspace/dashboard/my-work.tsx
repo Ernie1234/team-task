@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { useUpdateTask } from "@/hooks/api/use-tasks";
 import { projectIdOf } from "@/lib/task-meta";
 import type { TaskType } from "@/types/api.type";
-import { DueLabel, PriorityFlag, StatusDot } from "../task/views/task-pickers";
+import { DueLabel, PriorityFlag, StatusDot } from "@/components/workspace/task/views/task-pickers";
 
 type Bucket = "overdue" | "today" | "week" | "later" | "none";
 const BUCKETS: { id: Bucket; label: string; tone?: string }[] = [

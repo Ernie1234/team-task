@@ -21,7 +21,7 @@ import {
   uploadChatFilesMutationFn,
 } from "@/lib/api";
 import { useAppearanceStore } from "@/hooks/use-appearance";
-import { Group, SettingRow } from "./settings-ui";
+import { Group, SettingRow } from "@/components/settings/settings-ui";
 
 const errorMessage = (error: unknown) =>
   (error as { response?: { data?: { message?: string } } })?.response?.data?.message ?? (error as Error)?.message ?? "Something went wrong";

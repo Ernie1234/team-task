@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useCalendarConnection, useDisconnectCalendar, useSyncCalendar } from "@/hooks/api/use-calendar";
 import { calendarConnectUrl } from "@/lib/api";
 import useWorkspaceId from "@/hooks/use-workspace-id";
-import { Group, SettingRow } from "./settings-ui";
+import { Group, SettingRow } from "@/components/settings/settings-ui";
 
 /** Settings → Calendar: connect Google Calendar, sync, disconnect */
 export default function CalendarSection() {

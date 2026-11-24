@@ -11,7 +11,7 @@ import { useTourStore } from "@/hooks/use-tour";
 import { updateTourMutationFn } from "@/lib/api";
 import type { CurrentUserResponseType } from "@/types/api.type";
 import { cn } from "@/lib/utils";
-import { TOUR_STEPS, type TourStep } from "./tour-steps";
+import { TOUR_STEPS, type TourStep } from "@/components/tour/tour-steps";
 
 const CARD_WIDTH = 320;
 const GAP = 14; // space between the highlight and the card

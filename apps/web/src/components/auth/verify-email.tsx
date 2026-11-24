@@ -6,12 +6,12 @@ import { z } from "zod";
 import { verifyEmailSchema } from "@team-task/shared/validation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
-import { resendVerificationCodeMutationFn, verifyEmailMutationFn } from "../../lib/api";
-import { toast } from "../../hooks/use-toast";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { resendVerificationCodeMutationFn, verifyEmailMutationFn } from "@/lib/api";
+import { toast } from "@/hooks/use-toast";
 import type { CustomError } from "@/types/custom-error.type";
 
 const formSchema = verifyEmailSchema;

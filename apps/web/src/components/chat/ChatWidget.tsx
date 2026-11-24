@@ -16,7 +16,7 @@ import { formatListTime } from "@/lib/chat-time";
 import { messagePreview } from "@/lib/chat-files";
 import { cn } from "@/lib/utils";
 import type { OnlineUser } from "@/lib/socket";
-import ConversationAvatar from "./ConversationAvatar";
+import ConversationAvatar from "@/components/chat/ConversationAvatar";
 import { conversationTitle, initials } from "@/lib/chat-display";
 
 const MAX_AVATARS = 8;

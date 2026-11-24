@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/popover";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Textarea } from "../../ui/textarea";
+import { Textarea } from "@/components/ui/textarea";
 import EmojiPickerComponent from "@/components/emoji-picker";
 import { ProjectType } from "@/types/api.type";
 import { useMutation, useQueryClient } from "@tanstack/react-query";

@@ -1,6 +1,6 @@
 import mongoose, { Document, Schema } from "mongoose";
 
-import type { RoleDocument } from "./role-model";
+import type { RoleDocument } from "@/models/role-model";
 
 export interface MemberDocument extends Document {
   userId: mongoose.Types.ObjectId;

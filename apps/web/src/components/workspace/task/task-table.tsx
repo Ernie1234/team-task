@@ -1,12 +1,12 @@
 import { FC, useState } from "react";
-import { getColumns } from "./table/columns";
-import { DataTable } from "./table/table";
+import { getColumns } from "@/components/workspace/task/table/columns";
+import { DataTable } from "@/components/workspace/task/table/table";
 import { useParams } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
-import { DataTableFacetedFilter } from "./table/table-faceted-filter";
-import { priorities, statuses } from "./table/data";
+import { DataTableFacetedFilter } from "@/components/workspace/task/table/table-faceted-filter";
+import { priorities, statuses } from "@/components/workspace/task/table/data";
 import useTaskTableFilter from "@/hooks/use-task-table-filter";
 import { useQuery } from "@tanstack/react-query";
 import useWorkspaceId from "@/hooks/use-workspace-id";

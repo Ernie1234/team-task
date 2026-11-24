@@ -14,13 +14,13 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import Logo from "@/components/logo";
-import LogoutDialog from "./logout-dialog";
-import { WorkspaceSwitcher } from "./workspace-switcher";
-import { NavMain } from "./nav-main";
-import { NavProjects } from "./nav-projects";
-import { UpcomingEvents } from "./upcoming-events";
-import { AccountMenu } from "./account-menu";
-import { Separator } from "../ui/separator";
+import LogoutDialog from "@/components/asidebar/logout-dialog";
+import { WorkspaceSwitcher } from "@/components/asidebar/workspace-switcher";
+import { NavMain } from "@/components/asidebar/nav-main";
+import { NavProjects } from "@/components/asidebar/nav-projects";
+import { UpcomingEvents } from "@/components/asidebar/upcoming-events";
+import { AccountMenu } from "@/components/asidebar/account-menu";
+import { Separator } from "@/components/ui/separator";
 import useWorkspaceId from "@/hooks/use-workspace-id";
 import { useAuthContext } from "@/context/auth-provider";
 

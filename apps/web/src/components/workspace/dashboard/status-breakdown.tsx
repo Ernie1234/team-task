@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PRIORITY_META, PRIORITY_ORDER, STATUS_META, STATUS_ORDER } from "@/lib/task-meta";
 import type { DashboardType } from "@/types/api.type";
-import { PriorityFlag } from "../task/views/task-pickers";
+import { PriorityFlag } from "@/components/workspace/task/views/task-pickers";
 
 /** Where all the work stands: one stacked bar plus counts per status and open priority. */
 const StatusBreakdown = ({ workspaceId, data, isLoading }: { workspaceId: string; data?: DashboardType; isLoading: boolean }) => {

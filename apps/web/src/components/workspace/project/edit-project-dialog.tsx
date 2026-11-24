@@ -1,6 +1,6 @@
 import { Edit3 } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import EditProjectForm from "./edit-project-form";
+import EditProjectForm from "@/components/workspace/project/edit-project-form";
 import { ProjectType } from "@/types/api.type";
 import { useState } from "react";
 

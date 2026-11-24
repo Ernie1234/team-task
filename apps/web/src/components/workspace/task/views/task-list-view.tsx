@@ -21,8 +21,8 @@ import {
   PriorityPicker,
   StatusDot,
   StatusPicker,
-} from "./task-pickers";
-import QuickAddTask from "./quick-add-task";
+} from "@/components/workspace/task/views/task-pickers";
+import QuickAddTask from "@/components/workspace/task/views/quick-add-task";
 import { ConfirmDialog } from "@/components/resuable/confirm-dialog";
 
 type ListProps = {

@@ -1,7 +1,7 @@
 import "dotenv/config";
 import mongoose from "mongoose";
 
-import { RolePermissions } from "../utils/role-permission";
+import { RolePermissions } from "@/utils/role-permission";
 import { connectDB } from "@/config/db";
 import RoleModel from "@/models/role-model";
 
