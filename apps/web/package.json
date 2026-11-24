@@ -65,7 +65,8 @@
     "y-protocols": "^1.0.7",
     "yjs": "^13.6.33",
     "zod": "^3.24.1",
-    "zustand": "^5.0.8"
+    "zustand": "^5.0.8",
+    "@team-task/shared": "workspace:*"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
