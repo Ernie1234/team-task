@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import { config } from "@/config/app.config";
 import { apiOrigin } from "@/config/auth";
 import { getSocketService } from "@/config/socket.config";
-import { TaskStatusEnum } from "@/enums/task-enum";
+import { TaskStatusEnum } from "@team-task/shared/enums";
 import { sendAppEmail } from "@/mails/emails";
 import { renderEmail, renderSection, renderText, type EmailListItem } from "@/mails/email-layout";
 import EventModel from "@/models/event-model";

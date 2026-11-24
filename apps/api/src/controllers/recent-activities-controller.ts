@@ -2,7 +2,7 @@ import type { Request, Response } from "express";
 
 import { asyncHandler } from "@/middlewares/asyncHandlerMiddleware";
 import { BadRequestException } from "@/utils/appError";
-import { workspaceIdSchema } from "@/validation/workspace-validation";
+import { workspaceIdSchema } from "@team-task/shared/validation";
 import ActivityModel from "@/models/activity-model";
 import { HTTPSTATUS } from "@/config/http.config";
 import { getMemberRoleInWorkspace } from "@/services/member-service";

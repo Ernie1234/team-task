@@ -3,7 +3,7 @@ import { asyncHandler } from "@/middlewares/asyncHandlerMiddleware";
 import { fetchCurrentUser, updateAppearanceService, updateEmailPrefsService, updateTourService } from "@/services/user-service";
 import { sendTestDigest } from "@/services/email-service";
 import { isMailEnabled } from "@/mails/mailtrap";
-import { appearanceSchema, emailPrefsSchema, tourSchema, changePasswordSchema, deleteAccountSchema, updateProfileSchema } from "@/validation/user-validation";
+import { appearanceSchema, emailPrefsSchema, tourSchema, changePasswordSchema, deleteAccountSchema, updateProfileSchema } from "@team-task/shared/validation";
 import {
   changePasswordService,
   deleteAccountService,

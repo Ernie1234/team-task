@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import NoteModel, { type NoteDocument } from "@/models/note-model";
 import { getSocketService } from "@/config/socket.config";
 import { BadRequestException, ForbiddenException, NotFoundException } from "@/utils/appError";
-import type { CreateNoteType, UpdateNoteType } from "@/validation/note-validation";
+import type { CreateNoteType, UpdateNoteType } from "@team-task/shared/validation";
 import { closeDeletedNotes, hasLiveSession, revokeNoteAccess } from "@/services/note-collab-service";
 
 const AUTHOR = "name profilePicture";

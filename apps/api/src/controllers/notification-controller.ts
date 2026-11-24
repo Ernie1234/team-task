@@ -1,9 +1,9 @@
 import { HTTPSTATUS } from "@/config/http.config";
 import { asyncHandler } from "@/middlewares/asyncHandlerMiddleware";
 import { BadRequestException } from "@/utils/appError";
-import { workspaceIdSchema } from "@/validation/workspace-validation";
+import { workspaceIdSchema } from "@team-task/shared/validation";
 import type { Request, Response } from "express";
-import { notificationIdsSchema } from "@/validation/notification-validation";
+import { notificationIdsSchema } from "@team-task/shared/validation";
 import { getMemberRoleInWorkspace } from "@/services/member-service";
 import {
   getWorkspaceNotificationsService,

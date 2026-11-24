@@ -1,5 +1,5 @@
 import { HTTPSTATUS } from "@/config/http.config";
-import { Permissions } from "@/enums/role-enum";
+import { Permissions } from "@team-task/shared/enums";
 import { asyncHandler } from "@/middlewares/asyncHandlerMiddleware";
 import { getMemberRoleInWorkspace } from "@/services/member-service";
 import {
@@ -15,13 +15,13 @@ import {
   updateWorkspaceByIdService,
 } from "@/services/workspace-service";
 import { roleGuard } from "@/utils/roleGuard";
-import { inviteMemberSchema } from "@/validation/invite-code-validation";
+import { inviteMemberSchema } from "@team-task/shared/validation";
 import {
   changeRoleSchema,
   createWorkspaceSchema,
   updateWorkspaceSchema,
   workspaceIdSchema,
-} from "@/validation/workspace-validation";
+} from "@team-task/shared/validation";
 import type { Request, Response } from "express";
 
 export const createWorkspaceController = asyncHandler(

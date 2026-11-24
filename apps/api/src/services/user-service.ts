@@ -2,7 +2,7 @@ import MemberModel from "@/models/member-model";
 import UserModel from "@/models/user-model";
 import { BadRequestException } from "@/utils/appError";
 import Logger from "@/utils/logger";
-import type { AppearanceType, EmailPrefsInput, TourType } from "@/validation/user-validation";
+import type { AppearanceType, EmailPrefsInput, TourType } from "@team-task/shared/validation";
 import { prefsOf } from "@/services/email-service";
 
 export const fetchCurrentUser = async (userId: string) => {

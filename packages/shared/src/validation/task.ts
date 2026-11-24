@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { TaskStatusEnum, TaskPriorityEnum } from "@/enums/task-enum";
+import { TaskStatusEnum, TaskPriorityEnum } from "../enums/task";
 
 // A Zod schema to validate the URL parameters (workspaceId, projectId, taskId)
 // This is reusable for all routes that use these params.

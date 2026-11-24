@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-import { Roles } from "@/enums/role-enum";
-import { TaskStatusEnum } from "@/enums/task-enum";
+import { Roles } from "@team-task/shared/enums";
+import { TaskStatusEnum } from "@team-task/shared/enums";
 import MemberModel from "@/models/member-model";
 import RoleModel from "@/models/role-model";
 import TaskModel from "@/models/task-model";

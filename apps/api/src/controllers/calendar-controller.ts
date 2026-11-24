@@ -23,7 +23,7 @@ import {
   listEventsQuerySchema,
   snoozeSchema,
   updateEventSchema,
-} from "@/validation/calendar-validation";
+} from "@team-task/shared/validation";
 import Logger from "@/utils/logger";
 import { clearCookie, readSignedCookie, setSignedCookie } from "@/utils/signed-cookie";
 import mongoose from "mongoose";

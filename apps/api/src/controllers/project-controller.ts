@@ -6,11 +6,11 @@ import {
   createProjectSchema,
   projectIdSchema,
   updateProjectSchema,
-} from "@/validation/project-validation";
-import { workspaceIdSchema } from "@/validation/workspace-validation";
+} from "@team-task/shared/validation";
+import { workspaceIdSchema } from "@team-task/shared/validation";
 import { getMemberRoleInWorkspace } from "@/services/member-service";
 import { roleGuard } from "@/utils/roleGuard";
-import { Permissions } from "@/enums/role-enum";
+import { Permissions } from "@team-task/shared/enums";
 import {
   createProjectService,
   deleteProjectService,

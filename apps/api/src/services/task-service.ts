@@ -1,4 +1,4 @@
-import { TaskPriorityEnum, TaskStatusEnum } from "@/enums/task-enum";
+import { TaskPriorityEnum, TaskStatusEnum } from "@team-task/shared/enums";
 import type { ActivityDocument } from "@/models/activity-model";
 import ActivityModel from "@/models/activity-model";
 import MemberModel from "@/models/member-model";
@@ -64,7 +64,7 @@ import type {
   GetAllTasksServiceFilters,
   taskParamsSchema,
   updateTaskBodySchema,
-} from "@/validation/task-validation";
+} from "@team-task/shared/validation";
 import type z from "zod";
 
 type CreateTaskData = z.infer<typeof createTaskBodySchema> & {

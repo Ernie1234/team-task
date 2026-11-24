@@ -3,7 +3,7 @@ import {
   TaskStatusEnum,
   type TaskPriorityEnumType,
   type TaskStatusEnumType,
-} from "@/enums/task-enum";
+} from "@team-task/shared/enums";
 import { generateTaskCode } from "@/utils/generate-invite-code";
 import mongoose, { Document, Schema, Types } from "mongoose";
 

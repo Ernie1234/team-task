@@ -1,13 +1,6 @@
 /** Time-zone helpers built on Intl (no extra dependency) */
 
-export const isValidTimeZone = (tz: string) => {
-  try {
-    new Intl.DateTimeFormat("en-US", { timeZone: tz });
-    return true;
-  } catch {
-    return false;
-  }
-};
+export { isValidTimeZone } from "@team-task/shared/validation";
 
 /** Offset of `tz` from UTC at `date`, in ms */
 const offsetAt = (date: Date, tz: string) => {

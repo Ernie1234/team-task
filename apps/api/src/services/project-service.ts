@@ -1,4 +1,4 @@
-import { TaskStatusEnum } from "@/enums/task-enum";
+import { TaskStatusEnum } from "@team-task/shared/enums";
 import ActivityModel from "@/models/activity-model";
 import ProjectModel, { type ProjectDocument } from "@/models/project-model";
 import TaskModel from "@/models/task-model";
@@ -7,7 +7,7 @@ import { NotFoundException } from "@/utils/appError";
 import type {
   TCreateProjectInput,
   TUpdateProjectInput,
-} from "@/validation/project-validation";
+} from "@team-task/shared/validation";
 import mongoose from "mongoose";
 
 export const createProjectService = async (

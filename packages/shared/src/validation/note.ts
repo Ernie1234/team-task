@@ -1,8 +1,5 @@
 import { z } from "zod";
-import mongoose from "mongoose";
-import { NOTE_VISIBILITY } from "@/models/note-model";
-
-const objectId = () => z.string().trim().refine((v) => mongoose.isValidObjectId(v), "Invalid id");
+import { NOTE_VISIBILITY, objectId } from "./helpers";
 
 // Editor documents are stored as-is; cap their size so one note can't bloat the database
 const MAX_CONTENT_BYTES = 1_500_000;
