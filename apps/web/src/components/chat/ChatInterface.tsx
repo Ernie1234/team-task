@@ -14,12 +14,12 @@ import type { Message } from "@/lib/socket";
 import { formatDayLabel, sameDay } from "@/lib/chat-time";
 import { formatLastSeen } from "@/lib/presence";
 import type { Conversation } from "@/types/chat.type";
-import ConversationAvatar from "./ConversationAvatar";
+import ConversationAvatar from "@/components/chat/ConversationAvatar";
 import { conversationTitle } from "@/lib/chat-display";
-import MessageBubble, { type BubblePosition } from "./MessageBubble";
-import MessageInput, { type MessageInputHandle } from "./MessageInput";
-import TypingIndicator from "./TypingIndicator";
-import OnlineUsers from "./OnlineUsers";
+import MessageBubble, { type BubblePosition } from "@/components/chat/MessageBubble";
+import MessageInput, { type MessageInputHandle } from "@/components/chat/MessageInput";
+import TypingIndicator from "@/components/chat/TypingIndicator";
+import OnlineUsers from "@/components/chat/OnlineUsers";
 
 interface ChatInterfaceProps {
   conversation: Conversation;

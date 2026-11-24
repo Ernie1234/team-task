@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { appearanceSchema, emailPrefsSchema, updateProfileSchema } from "./user";
+import { appearanceSchema, emailPrefsSchema, updateProfileSchema } from "#shared/validation/user";
 
 const validAppearance = {
   mode: "system",

@@ -1,4 +1,4 @@
-import type { AppearanceType } from "../validation/user";
+import type { AppearanceType } from "#shared/validation/user";
 
 /** Personal appearance: colour theme, light/dark mode, font, text size, corners */
 export type Appearance = AppearanceType;

@@ -28,7 +28,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import TableSkeleton from "@/components/skeleton-loaders/table-skeleton";
-import { DataTablePagination } from "./table-pagination";
+import { DataTablePagination } from "@/components/workspace/task/table/table-pagination";
 
 interface PaginationProps {
   totalCount: number;

@@ -3,7 +3,7 @@ import { formatDistanceToNow } from "date-fns";
 import { FileText, Lock, Users } from "lucide-react";
 import { useCreateNote, useNotes } from "@/hooks/api/use-notes";
 import { NOTE_TEMPLATES } from "@/lib/note-templates";
-import { noteTitle } from "./note-tree";
+import { noteTitle } from "@/components/notes/note-tree";
 
 /** Landing screen: start a page from a template, or jump back into a recent one */
 export default function NotesHome({ workspaceId }: { workspaceId: string }) {

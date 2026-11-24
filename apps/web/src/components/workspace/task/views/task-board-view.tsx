@@ -5,8 +5,8 @@ import { STATUS_META, STATUS_ORDER } from "@/lib/task-meta";
 import { useUpdateTask } from "@/hooks/api/use-tasks";
 import type { TaskStatusEnumType } from "@/constant";
 import type { TaskType } from "@/types/api.type";
-import { AssigneeAvatar, DueLabel, PriorityFlag, StatusDot } from "./task-pickers";
-import QuickAddTask from "./quick-add-task";
+import { AssigneeAvatar, DueLabel, PriorityFlag, StatusDot } from "@/components/workspace/task/views/task-pickers";
+import QuickAddTask from "@/components/workspace/task/views/quick-add-task";
 
 const TaskCard = ({
   task,

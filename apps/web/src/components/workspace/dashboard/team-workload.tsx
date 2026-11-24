@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import PresenceDot from "@/components/presence/presence-dot";
 import { cn } from "@/lib/utils";
 import type { DashboardType } from "@/types/api.type";
-import { AssigneeAvatar } from "../task/views/task-pickers";
+import { AssigneeAvatar } from "@/components/workspace/task/views/task-pickers";
 
 /** Who has how much: open tasks per person, so work can be balanced. */
 const TeamWorkload = ({ workspaceId, data, isLoading }: { workspaceId: string; data?: DashboardType; isLoading: boolean }) => {

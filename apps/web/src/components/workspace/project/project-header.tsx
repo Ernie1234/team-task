@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { MessageCircle } from "lucide-react";
-import EditProjectDialog from "./edit-project-dialog";
+import EditProjectDialog from "@/components/workspace/project/edit-project-dialog";
 import useWorkspaceId from "@/hooks/use-workspace-id";
 import { getProjectByIdQueryFn } from "@/lib/api";
 import PermissionsGuard from "@/components/resuable/permission-guard";

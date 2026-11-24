@@ -2,7 +2,7 @@
 import React from "react";
 import Picker from "@emoji-mart/react";
 import data from "@emoji-mart/data";
-import { customEmojis } from "./custom-emojis";
+import { customEmojis } from "@/components/emoji-picker/custom-emojis";
 
 interface EmojiPickerComponentProps {
   onSelectEmoji: (emoji: string) => void;

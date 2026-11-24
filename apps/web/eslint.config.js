@@ -23,6 +23,11 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      // Import through the @/ alias (@/lib/utils), never ./ or ../
+      'no-restricted-imports': [
+        'error',
+        { patterns: [{ regex: '^\\.{1,2}/', message: 'Use the @/ alias, e.g. @/lib/utils.' }] },
+      ],
     },
   },
 )

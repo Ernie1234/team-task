@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Loader } from "lucide-react";
 import { googleSignInUrlFn } from "@/lib/api";
 import { toast } from "@/hooks/use-toast";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 const GoogleOauthButton = (props: {
   label: string;

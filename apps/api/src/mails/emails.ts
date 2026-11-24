@@ -1,13 +1,13 @@
 import { config } from "@/config/app.config";
 import Logger from "@/utils/logger";
-import { isMailEnabled, mailtrapClient, sender } from "./mailtrap";
+import { isMailEnabled, mailtrapClient, sender } from "@/mails/mailtrap";
 import {
   passwordResetCodeTemplate,
   passwordResetRequestTemplate,
   passwordResetSuccessTemplate,
   verificationEmailTemplate,
   workspaceInvitationTemplate,
-} from "./email-template";
+} from "@/mails/email-template";
 
 const baseUrl = config.FRONTEND_ORIGIN;
 

@@ -1,17 +1,17 @@
 import { Router } from "express";
 
-import userRoute from "./user-route";
+import userRoute from "@/routes/user-route";
 import { isAuthenticated } from "@/middlewares/isAuthenticatedMiddleware";
-import workspaceRoute from "./workspace-route";
-import membersRoute from "./member-route";
-import projectsRoute from "./project-route";
-import taskRoute from "./task-route";
-import notificationRoute from "./notification-route";
-import activitiesRoute from "./activities-route";
-import chatRoute from "./chat-route";
-import noteRoute from "./note-route";
-import calendarRoute from "./calendar-route";
-import emailRoute from "./email-route";
+import workspaceRoute from "@/routes/workspace-route";
+import membersRoute from "@/routes/member-route";
+import projectsRoute from "@/routes/project-route";
+import taskRoute from "@/routes/task-route";
+import notificationRoute from "@/routes/notification-route";
+import activitiesRoute from "@/routes/activities-route";
+import chatRoute from "@/routes/chat-route";
+import noteRoute from "@/routes/note-route";
+import calendarRoute from "@/routes/calendar-route";
+import emailRoute from "@/routes/email-route";
 
 const apiRouter: Router = Router();
 

@@ -8,7 +8,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSepara
 import { Skeleton } from "@/components/ui/skeleton";
 import { useCreateNote, useNotes } from "@/hooks/api/use-notes";
 import type { NoteSummaryType } from "@/types/api.type";
-import { buildTree, noteTitle } from "./note-tree";
+import { buildTree, noteTitle } from "@/components/notes/note-tree";
 
 const EXPANDED_KEY = "notes:expanded";
 const readExpanded = (): string[] => {

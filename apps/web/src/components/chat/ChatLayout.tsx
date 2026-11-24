@@ -10,9 +10,9 @@ import { useConversations } from "@/hooks/use-conversations";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { directRoomId } from "@/lib/chat-rooms";
 import type { Conversation } from "@/types/chat.type";
-import ChatSidebar from "./ChatSidebar";
-import ChatInterface from "./ChatInterface";
-import ChatDetails from "./ChatDetails";
+import ChatSidebar from "@/components/chat/ChatSidebar";
+import ChatInterface from "@/components/chat/ChatInterface";
+import ChatDetails from "@/components/chat/ChatDetails";
 
 interface ChatLayoutProps {
   workspaceId: string;

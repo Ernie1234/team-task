@@ -1,6 +1,6 @@
 import type { PermissionType } from "@team-task/shared/enums";
-import { UnauthorizedException } from "./appError";
-import { RolePermissions } from "./role-permission";
+import { UnauthorizedException } from "@/utils/appError";
+import { RolePermissions } from "@/utils/role-permission";
 
 export const roleGuard = (
   role: keyof typeof RolePermissions,

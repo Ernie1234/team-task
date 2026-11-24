@@ -10,7 +10,7 @@ import { formatListTime } from "@/lib/chat-time";
 import { messagePreview } from "@/lib/chat-files";
 import { conversationTitle, initials, NO_TYPERS } from "@/lib/chat-display";
 import type { Conversation } from "@/types/chat.type";
-import ConversationAvatar from "./ConversationAvatar";
+import ConversationAvatar from "@/components/chat/ConversationAvatar";
 
 type Filter = "all" | "unread" | "channels" | "people";
 const FILTERS: { id: Filter; label: string }[] = [

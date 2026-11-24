@@ -1,4 +1,4 @@
-import WorkspaceForm from "./create-workspace-form";
+import WorkspaceForm from "@/components/workspace/create-workspace-form";
 import useCreateWorkspaceDialog from "@/hooks/use-create-workspace-dialog";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 const CreateWorkspaceDialog = () => {

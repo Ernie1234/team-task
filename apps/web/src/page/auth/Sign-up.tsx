@@ -3,7 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { signUpSchema } from "@team-task/shared/validation";
-import { Button } from "../../components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -11,12 +11,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../../components/ui/form";
-import { Input } from "../../components/ui/input";
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
 import { useMutation } from "@tanstack/react-query";
-import { registerMutationFn } from "../../lib/api";
-import { toast } from "../../hooks/use-toast";
+import { registerMutationFn } from "@/lib/api";
+import { toast } from "@/hooks/use-toast";
 import { Loader } from "lucide-react";
 import GoogleOauthButton from "@/components/auth/google-oauth-button";
 import AuthShowcase from "@/components/auth/auth-showcase";

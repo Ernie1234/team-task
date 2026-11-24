@@ -1,8 +1,8 @@
 import { Column, ColumnDef, Row } from "@tanstack/react-table";
 import { format } from "date-fns";
 
-import { DataTableColumnHeader } from "./table-column-header";
-import { DataTableRowActions } from "./table-row-actions";
+import { DataTableColumnHeader } from "@/components/workspace/task/table/table-column-header";
+import { DataTableRowActions } from "@/components/workspace/task/table/table-row-actions";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -16,7 +16,7 @@ import {
   getAvatarColor,
   getAvatarFallbackText,
 } from "@/lib/helper";
-import { priorities, statuses } from "./data";
+import { priorities, statuses } from "@/components/workspace/task/table/data";
 import { TaskType } from "@/types/api.type";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 

@@ -18,6 +18,14 @@ bun run build
 
 Before finishing a change, run `typecheck` (and `lint` and `build` for the web app) from the root.
 
+## Imports
+
+No relative imports (`./`, `../`); ESLint fails on them in every package.
+
+- Inside `apps/web` and `apps/api`: the `@/` alias for `src/`, e.g. `@/lib/utils`, `@/services/task-service`.
+- Inside `packages/shared`: `#shared/…`, e.g. `#shared/validation/helpers` (set in its `package.json` `imports`). It can't use `@/`, because the apps compile shared's source and `@/` would resolve to the app's `src/`.
+- Between packages: the package name, e.g. `@team-task/shared/validation`.
+
 ## Dependencies
 
 - Add a dependency to the app that uses it: `cd apps/web && bun add <pkg>`.

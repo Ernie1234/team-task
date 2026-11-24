@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { isValidTimeZone } from "./helpers";
+import { isValidTimeZone } from "#shared/validation/helpers";
 
 const hexColor = z.string().regex(/^#[0-9a-fA-F]{6}$/, "Use a 6-digit hex colour like #4F46E5");
 

@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { createProjectSchema, projectIdSchema } from "./project";
+import { createProjectSchema, projectIdSchema } from "#shared/validation/project";
 
 const ID = "64b7f0c2a1b2c3d4e5f60718";
 

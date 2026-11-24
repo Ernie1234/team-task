@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { config } from "./app.config";
+import { config } from "@/config/app.config";
 import Logger from "@/utils/logger";
 
 let isConnected = false;

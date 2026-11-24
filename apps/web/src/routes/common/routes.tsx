@@ -7,7 +7,7 @@ import Members from "@/page/workspace/Members";
 import ProjectDetails from "@/page/workspace/ProjectDetails";
 import Settings from "@/page/workspace/Settings";
 import Tasks from "@/page/workspace/Tasks";
-import { AUTH_ROUTES, BASE_ROUTE, PROTECTED_ROUTES } from "./routePaths";
+import { AUTH_ROUTES, BASE_ROUTE, PROTECTED_ROUTES } from "@/routes/common/routePaths";
 import InviteUser from "@/page/invite/InviteUser";
 import NotificationPage from "@/page/workspace/Notification";
 import WorkspaceChat from "@/page/workspace/Chat";

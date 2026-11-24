@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { format } from "date-fns";
 import { Check, ChevronRight, Copy, GitBranch, Loader2, Trash2 } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
-import TaskDescription from "./task-description";
+import TaskDescription from "@/components/workspace/task/views/task-description";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ConfirmDialog } from "@/components/resuable/confirm-dialog";
@@ -22,8 +22,8 @@ import {
   StatusBadge,
   StatusDot,
   StatusPicker,
-} from "./task-pickers";
-import QuickAddTask from "./quick-add-task";
+} from "@/components/workspace/task/views/task-pickers";
+import QuickAddTask from "@/components/workspace/task/views/quick-add-task";
 
 export type TaskRef = { taskId: string; projectId: string };
 

@@ -2,7 +2,7 @@ import { Server as HTTPServer } from "http";
 import { Server as SocketIOServer, Socket } from "socket.io";
 import { fromNodeHeaders } from "better-auth/node";
 import { auth } from "@/config/auth";
-import { config } from "./app.config";
+import { config } from "@/config/app.config";
 import Logger from "@/utils/logger";
 import UserModel, { type UserDocument } from "@/models/user-model";
 import MemberModel from "@/models/member-model";

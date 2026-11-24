@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { forgotPasswordSchema, resetPasswordSchema, signInSchema, signUpSchema, verifyEmailSchema } from "./auth";
+import { forgotPasswordSchema, resetPasswordSchema, signInSchema, signUpSchema, verifyEmailSchema } from "#shared/validation/auth";
 
 test("sign-up password needs 8 characters", () => {
   const r = signUpSchema.safeParse({ name: "A", email: "a@b.co", password: "short" });

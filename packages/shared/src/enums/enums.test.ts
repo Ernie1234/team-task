@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { Permissions, Roles, TaskPriorityEnum, TaskStatusEnum } from "./index";
+import { Permissions, Roles, TaskPriorityEnum, TaskStatusEnum } from "#shared/enums/index";
 
 test("task status values", () => {
   expect(Object.values(TaskStatusEnum)).toEqual(["BACKLOG", "TODO", "IN_PROGRESS", "IN_REVIEW", "DONE"]);

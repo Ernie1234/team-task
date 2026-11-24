@@ -9,14 +9,14 @@ import useAuth from "@/hooks/api/use-auth";
 import { useTasks, type TaskQuery } from "@/hooks/api/use-tasks";
 import useGetWorkspaceMembers from "@/hooks/api/use-get-workspace-members";
 import useGetProjectsInWorkspaceQuery from "@/hooks/api/use-get-projects";
-import { DataTableFacetedFilter } from "../table/table-faceted-filter";
-import { priorities, statuses } from "../table/data";
+import { DataTableFacetedFilter } from "@/components/workspace/task/table/table-faceted-filter";
+import { priorities, statuses } from "@/components/workspace/task/table/data";
 import { isOverdue, projectIdOf } from "@/lib/task-meta";
-import CreateTaskDialog from "../create-task-dialog";
-import TaskListView from "./task-list-view";
-import TaskBoardView from "./task-board-view";
-import TaskDetailDialog, { type TaskRef } from "./task-detail-dialog";
-import { AssigneeAvatar } from "./task-pickers";
+import CreateTaskDialog from "@/components/workspace/task/create-task-dialog";
+import TaskListView from "@/components/workspace/task/views/task-list-view";
+import TaskBoardView from "@/components/workspace/task/views/task-board-view";
+import TaskDetailDialog, { type TaskRef } from "@/components/workspace/task/views/task-detail-dialog";
+import { AssigneeAvatar } from "@/components/workspace/task/views/task-pickers";
 import type { TaskType } from "@/types/api.type";
 
 const SORTS = {

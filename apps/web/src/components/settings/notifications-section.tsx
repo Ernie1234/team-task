@@ -8,7 +8,7 @@ import { useAuthContext } from "@/context/auth-provider";
 import { browserTimeZone, emailPrefsOf, useUpdateEmailPrefs } from "@/hooks/api/use-email-prefs";
 import { sendTestDigestMutationFn } from "@/lib/api";
 import type { EmailPrefs } from "@/types/api.type";
-import { Group, SettingRow, Switch } from "./settings-ui";
+import { Group, SettingRow, Switch } from "@/components/settings/settings-ui";
 
 const EMAIL_KINDS: { key: keyof EmailPrefs; title: string; description: string }[] = [
   { key: "taskAssigned", title: "Tasks assigned to me", description: "When someone gives you a task." },

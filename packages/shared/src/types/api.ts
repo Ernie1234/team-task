@@ -2,13 +2,13 @@ import type {
   PermissionType,
   TaskPriorityEnumType,
   TaskStatusEnumType,
-} from "../enums";
-import type { Appearance } from "./appearance";
+} from "#shared/enums/index";
+import type { Appearance } from "#shared/types/appearance";
 import type { z } from "zod";
-import type { NoteVisibility } from "../validation/helpers";
-import type { createProjectSchema, updateProjectSchema } from "../validation/project";
-import type { createTaskBodySchema } from "../validation/task";
-import type { createWorkspaceSchema, updateWorkspaceSchema } from "../validation/workspace";
+import type { NoteVisibility } from "#shared/validation/helpers";
+import type { createProjectSchema, updateProjectSchema } from "#shared/validation/project";
+import type { createTaskBodySchema } from "#shared/validation/task";
+import type { createWorkspaceSchema, updateWorkspaceSchema } from "#shared/validation/workspace";
 
 export type loginType = { email: string; password: string };
 /** Better Auth's sign-in response */

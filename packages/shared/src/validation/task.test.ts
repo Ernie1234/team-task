@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { createTaskBodySchema, taskParamsSchema, updateTaskBodySchema } from "./task";
+import { createTaskBodySchema, taskParamsSchema, updateTaskBodySchema } from "#shared/validation/task";
 
 const ID = "64b7f0c2a1b2c3d4e5f60718";
 

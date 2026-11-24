@@ -12,7 +12,7 @@ import { formatLastSeen } from "@/lib/presence";
 import { formatListTime } from "@/lib/chat-time";
 import { cn } from "@/lib/utils";
 import type { Conversation } from "@/types/chat.type";
-import ConversationAvatar from "./ConversationAvatar";
+import ConversationAvatar from "@/components/chat/ConversationAvatar";
 
 const attachmentsQueryKey = (roomId: string) => ["chat-attachments", roomId] as const;
 

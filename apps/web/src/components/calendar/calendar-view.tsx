@@ -29,7 +29,7 @@ import { getEventQueryFn } from "@/lib/api";
 import { eventOnDay, formatEventTime, layoutDay } from "@/lib/calendar";
 import { projectIdOf, STATUS_META } from "@/lib/task-meta";
 import type { CalendarEventType, TaskType } from "@/types/api.type";
-import { CalendarConnectionControl } from "./calendar-connection";
+import { CalendarConnectionControl } from "@/components/calendar/calendar-connection";
 
 const VIEWS = ["week", "month", "agenda"] as const;
 type View = (typeof VIEWS)[number];
